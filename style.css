@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('fonts/Gilroy-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kajiro';
+  src: url('fonts/Kajiro\ Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +26,9 @@ body {
   height: 100%;
   overflow: hidden;
 }
+
+
+
 
 #main {
   width: 100%;
