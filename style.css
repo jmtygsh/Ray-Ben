@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "gilroy";
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+}
+
+#back {
+  width: 100%;
+  height: 100vh;
+}
+
+#back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#top {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+#workingarea {
+  position: relative;
+  width: 90%;
+  height: 100vh;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0;
+}
+
+#nav #logo {
+  height: 9vh;
+}
+
+#nleft,
+#nright {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+#nav a {
+  pointer-events: all;
+  text-decoration: none;
+  color: #fff;
+
+  text-transform: uppercase;
+  font-size: 0.9vw;
+  /* font-size: 12px; */
+
+  font-weight: 600;
+}
+
+#nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+#nav a:hover::after {
+  width: 100%; /* Expands underline to fit the link text width */
+}
+
+#hero {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  /* extra */
+  margin-top: 3vw;
+}
+
+#heroleft {
+  min-width: 50%;
+}
+
+#heroleft .elem {
+  position: relative;
+  height: 8vw;
+  overflow: hidden;
+}
+
+#heroleft .elem h1:nth-child(1) {
+  top: 0;
+}
+
+#heroleft .elem h1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-family: "kajiro";
+  color: #fff;
+  font-weight: 100;
+  font-size: 9vw;
+}
+
+#heroleft .elem-btn {
+  position: relative;
+  overflow: hidden;
+  height: 3vw;
+  margin-top: 2vw;
+}
+
+#heroleft button {
+  position: absolute;
+  pointer-events: all;
+  padding: 0.2vw 2vw;
+  font-size: 2.5vw;
+  /* margin-top: 2vw; */
+  font-family: "kajiro";
+  outline: none;
+  border-width: 0px;
+  border-style: none;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
+#heroleft button:hover {
+  background-color: #5d7aff;
+}
+
+#heroright {
+  width: 25%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#heroright p {
+  text-align: right;
+  font-weight: 100;
+}
+
+#heroright p:nth-child(3) {
+  margin-bottom: 50px;
+}
+
+#heroright #imagediv {
+  width: 100%;
+  height: 160px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url(https://images.unsplash.com/photo-1718203695046-0dfd0976a198?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  transition: filter 0.3s ease;
+}
+
+#mob-menu {
+  display: none;
+}
+
+@media (max-width: 670px) {
+  #heroright {
+    display: none;
+  }
+
+  #mob-menu {
+    display: inline;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  #nav {
+    padding: 20px 0;
+  }
+
+  #nav a {
+    display: none;
+  }
+
+  #heroleft {
+    min-width: 100%;
+  }
+
+  #heroleft .elem {
+    height: 13vh;
+  }
+
+  #heroleft .elem h1 {
+    font-size: 100px;
+  }
+
+  #heroleft .elem-btn {
+    height: 45px;
+    margin-top: 25px;
+  }
+
+  #heroleft button {
+    padding: 10px 30px;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    font-family: gilroy;
+  }
+}
